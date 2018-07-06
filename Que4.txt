@@ -1,0 +1,14 @@
+Q.4 - Create a numpy array A of shape(10,1).
+
+import numpy as np
+from math import *
+def f(x):
+    return(1 / (1 + exp(-x)) )
+A = np.random.rand(10,1)
+print("The array is:")
+print(A)
+C = np.zeros((10, 1))
+for i in range(10):
+    C[i] = f(A[i])
+print("The new array is:")
+print(C)
