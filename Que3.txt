@@ -1,0 +1,16 @@
+Q.3 - Create a numpy array A of shape(10,20) and B of shape (20,25) using np.random. Print the matrix which is the matrix multiplication of A and B. The shape of the new matrix should be (10,25). Using basic numpy math functions only find the sum of all the elements of the new matrix.
+
+import numpy as np
+A = np.random.rand(10,20)
+B = np.random.rand(20,25)
+C = np.zeros((10, 25))
+print(A)
+print(B)
+for i in range(10):
+    for j in range(25):
+        for k in range(20):
+            C[i][j] += A[i][k] * B[k][j]
+print(C)
+x=np.sum(C)
+print("Sum is:",end='')
+print(x)
